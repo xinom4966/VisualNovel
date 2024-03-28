@@ -15,6 +15,13 @@ public class AnswerBox : MonoBehaviour
 
     public void SubmitNameBtn()
     {
-        manager.SetUserName(input.text);
+        if (input.text == "Will" || input.text == "Williams")
+        {
+            manager.SetUserName("William");
+        }
+        else
+        {
+            manager.SetUserName(input.text);
+        }
     }
 }

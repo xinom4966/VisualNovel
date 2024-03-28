@@ -12,8 +12,18 @@ public class GlobalManager : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        username = "Simon";
+    }
+
     public void SetUserName(string input)
     {
         username = input;
+    }
+
+    public string GetUserName()
+    {
+        return username;
     }
 }
