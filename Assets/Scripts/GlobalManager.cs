@@ -19,7 +19,10 @@ public class GlobalManager : MonoBehaviour
 
     public void SetUserName(string input)
     {
-        username = input;
+        if (input != null)
+        {
+            username = input;
+        }
     }
 
     public string GetUserName()

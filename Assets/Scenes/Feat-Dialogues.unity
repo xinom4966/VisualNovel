@@ -867,8 +867,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1212527360}
-  fullText: Hello World
+  fullText: 'Hello world '
   Delay: 0.1
+  manager: {fileID: 801615227}
 --- !u!1 &1244559677
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,8 +921,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1244559680}
-  fullText: Text3
+  fullText: '*'
   Delay: 0.1
+  manager: {fileID: 801615227}
 --- !u!114 &1244559680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,8 +1283,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1542214352}
-  fullText: Hello user
+  fullText: 'Hello * ! '
   Delay: 0.1
+  manager: {fileID: 801615227}
 --- !u!114 &1542214352
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class TextBehaviour : MonoBehaviour
     [SerializeField] private string fullText;
     [SerializeField] private float Delay;
     private string currentText = "";
-    private GlobalManager manager;
+    [SerializeField] private GlobalManager manager;
     private string username;
 
     private void Start()
@@ -24,12 +24,14 @@ public class TextBehaviour : MonoBehaviour
     {
         for (int i = 0; i <= fullText.Length; i++)
         {
-            if (fullText.Substring(i, 4) == "user")
+            if (fullText.Substring(i, 1) == "*")
             {
-                currentText = username.Substring(0, i);
-                text.text = currentText;
-                fullText.Remove(i, 4);
-                yield return new WaitForSeconds(Delay);
+                for (int j = 0; j <= username.Length; j++)
+                {
+                    currentText = username.Substring(0, j);
+                    text.text = currentText;
+                    yield return new WaitForSeconds(Delay);
+                }
             }
             else
             {
