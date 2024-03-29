@@ -31,6 +31,16 @@ public class GlobalManager : MonoBehaviour
     {
         return username;
     }
+
+    public void AddEnding()
+    {
+        DialogueManager currentDialogue = DialogueManager.Instance;
+        if (currentDialogue.GetEnding() != Endings.PasUnEnding)
+        {
+            return;
+        }
+        endings.Add(currentDialogue.GetEnding());
+    }
 }
 
 public enum Endings
@@ -39,5 +49,6 @@ public enum Endings
     EngloutiParLaMaison,
     NouvelleMaison,
     Maison,
-    Evasif
+    Evasif,
+    PasUnEnding
 }

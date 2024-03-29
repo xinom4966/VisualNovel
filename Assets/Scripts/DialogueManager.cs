@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -9,6 +10,14 @@ public class DialogueManager : MonoBehaviour
     private int ind = 1;
     private GlobalManager manager;
     [SerializeField] private Endings ending;
+    [SerializeField] private List<string> namesForTheChoices;
+    [SerializeField] private List<string> ScenesToLoad;
+    public static DialogueManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -19,8 +28,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (ind >= texts.Count && ind >= sprites.Count)
         {
-            //Insert scene transition here
-            Debug.Log("Fin du dialogue");
+            SceneManager.LoadScene(ScenesToLoad[0]);
         }
         else
         {
@@ -38,5 +46,15 @@ public class DialogueManager : MonoBehaviour
     public Endings GetEnding()
     {
         return ending;
+    }
+
+    public string GetNextScenesByInd(int ind)
+    {
+        return ScenesToLoad[ind];
+    }
+
+    public string GetChoiceNamesByInd(int ind)
+    {
+        return namesForTheChoices[ind];
     }
 }
