@@ -6,6 +6,7 @@ public class GlobalManager : MonoBehaviour
 {
     private string username;
     public static GlobalManager instance;
+    private List<Endings> endings;
 
     private void Awake()
     {
@@ -15,6 +16,7 @@ public class GlobalManager : MonoBehaviour
     private void Start()
     {
         username = "Simon";
+        endings = new List<Endings>();
     }
 
     public void SetUserName(string input)
@@ -29,4 +31,13 @@ public class GlobalManager : MonoBehaviour
     {
         return username;
     }
+}
+
+public enum Endings
+{
+    PerduDansLaMaison,
+    EngloutiParLaMaison,
+    NouvelleMaison,
+    Maison,
+    Evasif
 }

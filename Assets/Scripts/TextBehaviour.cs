@@ -10,7 +10,7 @@ public class TextBehaviour : MonoBehaviour
     [SerializeField] private string fullText;
     [SerializeField] private float Delay;
     private string currentText = "";
-    [SerializeField] private GlobalManager manager;
+    private GlobalManager manager;
     private string username;
 
     private void Start()

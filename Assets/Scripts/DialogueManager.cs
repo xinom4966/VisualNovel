@@ -7,7 +7,13 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] List<GameObject> texts = new();
     [SerializeField] List<GameObject> sprites = new();
     private int ind = 1;
+    private GlobalManager manager;
+    [SerializeField] private Endings ending;
 
+    private void Start()
+    {
+        manager = GlobalManager.instance;
+    }
 
     public void NextBtn()
     {
@@ -27,5 +33,10 @@ public class DialogueManager : MonoBehaviour
             }
         }
         ind++;
+    }
+
+    public Endings GetEnding()
+    {
+        return ending;
     }
 }
