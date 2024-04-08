@@ -19,6 +19,11 @@ public class GlobalManager : MonoBehaviour
         endings = new List<Endings>();
     }
 
+    private void Update()
+    {
+        AddEnding();
+    }
+
     public void SetUserName(string input)
     {
         if (input != null)
