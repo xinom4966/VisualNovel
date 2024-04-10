@@ -1194,7 +1194,7 @@ MonoBehaviour:
   ending: 4
   namesForTheChoices: []
   ScenesToLoad:
-  - Intro
+  - Debut-Maison
 --- !u!1 &1542214349
 GameObject:
   m_ObjectHideFlags: 0

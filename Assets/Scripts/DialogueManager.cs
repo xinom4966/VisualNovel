@@ -27,6 +27,11 @@ public class DialogueManager : MonoBehaviour
     {
         if (ind >= texts.Count && ind >= sprites.Count)
         {
+            if (manager.GetHasAllEndings())
+            {
+                manager.SetHasAllEndings(false);
+                SceneManager.LoadScene("Debut-Secret");
+            }
             SceneManager.LoadScene(ScenesToLoad[0]);
         }
         else
