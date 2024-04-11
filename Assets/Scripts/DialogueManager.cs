@@ -1,10 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI endingsDisplay;
     [SerializeField] List<GameObject> texts = new();
     [SerializeField] List<GameObject> sprites = new();
     private int ind = 1;
@@ -22,13 +23,22 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         manager = GlobalManager.instance;
+        endingsDisplay.text = "Endings: " + manager.GetEndingCount() + " / 5";
     }
 
     public void NextBtn()
     {
         if (ind >= texts.Count && ind >= sprites.Count)
         {
-            SceneManager.LoadScene(ScenesToLoad[0]);
+            if (manager.GetHasAllEndings())
+            {
+                manager.SetHasAllEndings(false);
+                SceneManager.LoadScene("Debut-Secret");
+            }
+            else
+            {
+                SceneManager.LoadScene(ScenesToLoad[0]);
+            }
         }
         else
         {

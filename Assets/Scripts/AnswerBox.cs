@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -18,10 +16,12 @@ public class AnswerBox : MonoBehaviour
         if (input.text == "Will" || input.text == "Williams")
         {
             manager.SetUserName("William");
+            input.text = "Nom Enregistré: " + "William";
         }
         else
         {
             manager.SetUserName(input.text);
+            input.text = "Nom Enregistré : " + input.text;
         }
     }
 }
