@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GlobalManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI endingsDisplay;
     private string username;
     public static GlobalManager instance;
     private List<Endings> endings;
@@ -62,7 +61,6 @@ public class GlobalManager : MonoBehaviour
             {
                 endings.Add(currentDialogue.GetEnding());
                 endingCount++;
-                endingsDisplay.text = "Endings: " + endingCount + " / 5";
                 gotEnding = true;
             }
         }
@@ -77,6 +75,11 @@ public class GlobalManager : MonoBehaviour
     public bool GetHasAllEndings()
     {
         return hasAllEndings;
+    }
+
+    public int GetEndingCount()
+    {
+        return endingCount;
     }
 }
 
