@@ -38,4 +38,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TombeeDeLaNuit.unity
     guid: ae9a268fa065ecd4e850a5ce6a9af967
+  - enabled: 1
+    path: Assets/Scenes/Debut-Secret.unity
+    guid: e8ed552bc64e8c3429c322b0aabf61d0
+  - enabled: 1
+    path: Assets/Scenes/Secret1.unity
+    guid: dce1e219cc3cba34dafa8b5638fbcc6d
+  - enabled: 1
+    path: Assets/Scenes/Secret2.unity
+    guid: 72050dfa0fafd5f40a840821b0a89810
+  - enabled: 1
+    path: Assets/Scenes/Secret3.unity
+    guid: b85912c884352e64f8301e1022ab6f6f
   m_configObjects: {}

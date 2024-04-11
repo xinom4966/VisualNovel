@@ -62,7 +62,7 @@ public class GlobalManager : MonoBehaviour
             {
                 endings.Add(currentDialogue.GetEnding());
                 endingCount++;
-                endingsDisplay.text = endingCount.ToString();
+                endingsDisplay.text = "Endings: " + endingCount + " / 5";
                 gotEnding = true;
             }
         }
