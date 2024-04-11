@@ -52,7 +52,7 @@ public class GlobalManager : MonoBehaviour
         DialogueManager currentDialogue = DialogueManager.Instance;
         if (currentDialogue.GetEnding() == Endings.PasUnEnding)
         {
-            gotEnding = true;
+            gotEnding = false;
             return;
         }
         if (!gotEnding)
