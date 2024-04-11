@@ -35,7 +35,10 @@ public class DialogueManager : MonoBehaviour
                 manager.SetHasAllEndings(false);
                 SceneManager.LoadScene("Debut-Secret");
             }
-            SceneManager.LoadScene(ScenesToLoad[0]);
+            else
+            {
+                SceneManager.LoadScene(ScenesToLoad[0]);
+            }
         }
         else
         {
