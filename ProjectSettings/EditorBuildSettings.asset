@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Secret3.unity
     guid: b85912c884352e64f8301e1022ab6f6f
+  - enabled: 1
+    path: Assets/Scenes/VraiFin.unity
+    guid: 11303051e6821584e9fe064fa52cd6d8
   m_configObjects: {}
