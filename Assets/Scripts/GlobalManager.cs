@@ -28,9 +28,10 @@ public class GlobalManager : MonoBehaviour
     private void Update()
     {
         AddEnding();
-        if (endings.Count == 5)
+        if (endingCount == 5)
         {
-            hasAllEndings = true;
+            SetHasAllEndings(true);
+            endingCount++;
         }
     }
 
@@ -68,8 +69,11 @@ public class GlobalManager : MonoBehaviour
 
     public void SetHasAllEndings(bool value)
     {
-        hasAllEndings = value;
-        SetUserName("Simon");
+        if (hasAllEndings != value)
+        {
+            hasAllEndings = value;
+            SetUserName("Simon");
+        }
     }
 
     public bool GetHasAllEndings()
@@ -79,6 +83,10 @@ public class GlobalManager : MonoBehaviour
 
     public int GetEndingCount()
     {
+        if (endingCount >= 5)
+        {
+            return 5;
+        }
         return endingCount;
     }
 }
