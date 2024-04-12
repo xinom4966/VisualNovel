@@ -67,4 +67,9 @@ public class DialogueManager : MonoBehaviour
     {
         return namesForTheChoices[ind];
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
